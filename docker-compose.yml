@@ -26,4 +26,4 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
