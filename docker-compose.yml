@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+
+  llm1:
+    image: llm-model:test
+    container_name: llm1
+    ports:
+      - "8001:8000"
+
+  llm2:
+    image: llm-model:test
+    container_name: llm2
+    ports:
+      - "8002:8000"
+
+  llm3:
+    image: llm-model:test
+    container_name: llm3
+    ports:
+      - "8003:8000"
+
+  nginx:
+    image: nginx
+    container_name: llm-loadbalancer
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
