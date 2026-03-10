@@ -25,5 +25,4 @@ services:
     container_name: llm-loadbalancer
     ports:
       - "8081:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    
