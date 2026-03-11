@@ -3,7 +3,7 @@ from transformers import pipeline
 
 app = FastAPI()
 
-generator = pipeline("text-generation", model="gpt2")
+generator = pipeline("text-generation", model="distilgpt2")
 
 @app.get("/generate")
 def generate(prompt: str):
